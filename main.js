@@ -78,7 +78,7 @@
       todoList.appendChild(newTodo);
 
       const deleteButton = document.createElement('button');
-      deleteButton.textContent = '削除'
+      deleteButton.textContent = '削除';
       newTodo.appendChild(deleteButton);
       deleteButton.addEventListener('click', (event) => {
         promiseTaskOfDeletingTodo(index);
