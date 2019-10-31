@@ -74,16 +74,14 @@
 
     todos.forEach((value, index) => {
       const newTodo = document.createElement('li');
-      const taskNumber = index + 1;
-      newTodo.textContent = value;
+      newTodo.textContent = index + 1 + '：' + value;
       todoList.appendChild(newTodo);
-      console.log(taskNumber + '：' + newTodo.textContent);
 
       const deleteButton = document.createElement('button');
-      deleteButton.textContent = '削除';
+      deleteButton.textContent = '削除'
       newTodo.appendChild(deleteButton);
       deleteButton.addEventListener('click', (event) => {
-        promiseTaskOfDeletingTodo();
+        promiseTaskOfDeletingTodo(index);
       });
     });
   }
